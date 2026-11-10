@@ -1,0 +1,5 @@
+data/raw/
+secom.duckdb
+secom.duckdb.wal
+__pycache__/
+*.pyc
