@@ -120,5 +120,3 @@ The label-shuffle test uses a random seed and has no second implementation, so i
 ## How this was built
 
 Drafted with Claude Code as a coding partner. LEARN.md explains each step so I can explain and rewrite it myself.
-
-*(Wording to be approved by the author before publishing.)*
