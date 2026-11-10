@@ -48,3 +48,9 @@ Four sensors are drawn: the 3 usable sensors with the highest same-period |t|, a
 - **Suspected sensor** = the flagged sensor, plus whether it is in the top 20 by same-period |t|.
 - **Recovered?** = in the next window the same sensor has fewer than 3 Rule 1 alarm points. Also shown: the fail rate in the flagged window and in the next window.
 - This table records association only. It cannot say a sensor caused a failure.
+
+## Added after seeing results (kept separate so it is clear what was and was not pre-stated)
+- Tie-break for the quiet comparison sensor: the lowest sensor number wins (written into query 08).
+- Label-shuffle test: 500 shuffles, random seed 2008, 95th percentile of the best |t| as the yardstick.
+- Query 11 (sensors starting an excursion, by window) was added after queries 09 and 10 showed that most flagged excursions never recovered. It is exploration, not a pre-stated rule.
+- Check table: the first run of the independent recomputation disagreed on 4 sensors. The cause was in the checking code (the standard deviation of identical floating point values came out as 1e-16, not 0, so a constant window was not recognised); the SQL was right and was not changed.
